@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/homeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <ListView
+        android:id="@+id/music_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:cacheColorHint="#ffffff"
+        android:listSelector="#ffffff"
+        android:dividerHeight="1dp"
+        android:layout_marginBottom="50dp">
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/single_song"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/music_list">
+
+        <ImageView
+            android:id="@+id/music_album"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/music3"/>
+
+        <RelativeLayout
+            android:id="@+id/musicinfo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@id/music_album"
+            android:layout_toRightOf="@id/music_album">
+
+            <TextView android:id="@+id/music_name"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5.0dp"
+                android:layout_marginTop="5.0dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="@string/name"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/music_duration"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/music_name"
+                android:layout_marginBottom="5.0dp"
+                android:layout_marginLeft="5.0dp"
+                android:text="@string/time"
+                android:textColor="@android:color/black"/>
+
+            <RelativeLayout
+                android:id="@+id/music_buttom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/music_name">
+
+
+                <Button
+                    android:id="@+id/shuffle_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/play_music"
+                    android:background="@drawable/shuffle_none"/>
+                <Button
+                    android:id="@+id/play_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/next_music"
+                    android:background="@drawable/play"/>
+
+                <Button
+                    android:id="@+id/next_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/next"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/homeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <ListView
+        android:id="@+id/music_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:dividerHeight="1dp"
+        android:layout_marginBottom="60dp">
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/single_song"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FDF5E6"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/music_album"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/album1"/>
+
+        <RelativeLayout
+            android:id="@+id/musicinfo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@id/music_album"
+            android:layout_toRightOf="@id/music_album">
+
+            <com.example.jiangliu.music.Class.MyTextView
+                android:id="@+id/music_name"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5.0dp"
+                android:layout_marginTop="5.0dp"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:text="@string/name"
+                android:textColor="#D2B48C"/>
+
+            <TextView
+                android:id="@+id/music_duration"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/music_name"
+                android:layout_marginBottom="15.0dp"
+                android:layout_marginLeft="5.0dp"
+                android:text="@string/time"
+                android:textColor="#DEB887"/>
+
+            <RelativeLayout
+                android:id="@+id/music_buttom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/music_name">
+
+
+                <Button
+                    android:id="@+id/shuffle_music"
+                    android:layout_width="30dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/play_music"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/random"/>
+                <Button
+                    android:id="@+id/play_music"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/next_music"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/playbutton"/>
+
+                <Button
+                    android:id="@+id/next_music"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/nextbutton"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
